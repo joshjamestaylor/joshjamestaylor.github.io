@@ -4,19 +4,80 @@
     /* You can include additional properties such as font-weight, font-style, etc. if needed */
   }
   html{
-    background-color: #F6C1A9;
-    background-image: url('/assets/images/mushrooms.jpg');
-    color: #686741;
+    background-color: #686741;
+    color: #F8DDCE;
+    background-image: url('/assets/images/svg/flowers.svg');
+    background-size: 20%;
+
   }
   
   body {
-    font-family: 'FalseWidow', sans-serif; /* Use the font for the body or any other element */
     font-weight: 100;
   }
   
-  h1 {
+  h1, h2{
     font-family: 'FalseWidow', serif; /* Use the font for headings or other elements */
     font-weight: 100;
+    text-shadow: -5px 0 #686741, 0 3px #686741, 3px 0 #686741, 0 -3px #686741;
+    text-shadow: 0.0px 10.0px 0.02px #686741, 9.8px 2.1px 0.02px #686741, 4.2px -9.1px 0.02px #686741, -8.0px -6.0px 0.02px #686741, -7.6px 6.5px 0.02px #686741, 4.8px 8.8px 0.02px #686741, 9.6px -2.8px 0.02px #686741, -0.7px -10.0px 0.02px #686741, -9.9px -1.5px 0.02px #686741, -3.5px 9.4px 0.02px #686741, 8.4px 5.4px 0.02px #686741, 7.1px -7.0px 0.02px #686741, -5.4px -8.4px 0.02px #686741, -9.4px 3.5px 0.02px #686741, 1.4px 9.9px 0.02px #686741, 10.0px 0.8px 0.02px #686741, 2.9px -9.6px 0.02px #686741, -8.7px -4.8px 0.02px #686741, -6.6px 7.5px 0.02px #686741, 5.9px 8.0px 0.02px #686741, 9.1px -4.1px 0.02px #686741, -2.1px -9.8px 0.02px #686741, -10.0px -0.1px 0.02px #686741, -2.2px 9.8px 0.02px #686741, 9.1px 4.2px 0.02px #686741, 6.1px -8.0px 0.02px #686741, -6.5px -7.6px 0.02px #686741, -8.8px 4.7px 0.02px #686741, 2.7px 9.6px 0.02px #686741, 10.0px -0.6px 0.02px #686741, 1.5px -9.9px 0.02px #686741, -9.3px -3.6px 0.02px #686741, -5.5px 8.4px 0.02px #686741, 7.0px 7.2px 0.02px #686741, 8.5px -5.3px 0.02px #686741, -3.4px -9.4px 0.02px #686741, -9.9px 1.3px 0.02px #686741, -0.8px 10.0px 0.02px #686741, 9.6px 2.9px 0.02px #686741, 4.9px -8.7px 0.02px #686741, -7.5px -6.7px 0.02px #686741, -8.1px 5.9px 0.02px #686741, 4.0px 9.2px 0.02px #686741, 9.8px -2.0px 0.02px #686741, 0.2px -10.0px 0.02px #686741, -9.7px -2.3px 0.02px #686741, -4.3px 9.0px 0.02px #686741, 7.9px 6.1px 0.02px #686741;
 
+    color:#F8DDCE;
+
+  }
+
+  h1{
+    font-size: 72px;
+
+  }
+  h2{
+    font-size: 48px;
+  }
+
+  p{
+    color: #686741;
+
+  }
+  /* Basic Container Class */
+  .container {
+    width: 80%; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px; /* Add padding to the container */
+    box-sizing: border-box; /* Include padding and border in the total width */
+    /* Add more styles as needed */
+  }
+
+  .section{
+    display: flex;
+
+    @media only screen and (max-width: 780px) {
+      flex-direction: column;
+
+    }
+  }
+  .section__half{
+    width: 50%;
+
+    @media only screen and (max-width: 780px) {
+      width: 100%;
+
+    }
+  }
+
+  .text{
+
+  }
+
+
+  .card{
+    background-color: #5c3818;
+    border-image: url('/assets/images/frame.png') 93 92 87 92 stretch stretch; 
+    border-style: inset;
+    border-width: 60px;
+    width: 50%;
+    box-shadow: 0px 0px 20px #222222;
+  }
+  .card__image{
+    width: -webkit-fill-available;
+    margin: -25px;
   }
   
