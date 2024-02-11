@@ -35,8 +35,9 @@
             dropdown2Value === successfulCombination[1] &&
             dropdown3Value === successfulCombination[2]
         ) {
-            resultElement.innerHTML = "Success! You have selected the correct combination.";
+            resultElement.innerHTML = "Yes I'm in. There's a note. It reads 'In this vault, where secrets are kept and treasures unfold, I've hidden something for you – a gift. 2 Tickets. Picture this: a clandestine boat ride under a sky adorned with stars, the soft jazz melodies caressing our ears as the city lights twinkle in the distance. To her, from him.";
+
         } else {
-            resultElement.innerHTML = "Sorry, the combination is not correct. Please try again.";
+            resultElement.innerHTML = "Hmmm, that's not it. Let's try again";
         }
     }

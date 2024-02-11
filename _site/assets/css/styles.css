@@ -83,4 +83,57 @@
     width: -webkit-fill-available;
     margin: -25px;
   }
+
+/* CSS */
+.btn {
+  /* Add your desired styles here */
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #F8DDCE; /* Green color as an example */
+  color: 5c3818;
+  border: 1px solid #F8DDCE;
+  color:#5c3818;
+
+  cursor: pointer;
+  font-family: 'FalseWidow', serif; /* Use the font for headings or other elements */
+
+}
+
+/* You can add additional styles or modify the existing ones based on your design preferences */
+.btn:hover {
+  background-color: #F8DDCE; /* Darker green color on hover */
+  filter: brightness(0.9);
+  color:#5c3818;
+}
   
+
+        /* Style for the select element */
+        select {
+          padding: 8px; /* Adjust the padding as needed */
+          font-size: 16px; /* Adjust the font size as needed */
+          border: 1px solid #ccc; /* Add a border for a cleaner look */
+          border-radius: 4px; /* Optional: Add border-radius for rounded corners */
+          width: 150px; /* Adjust the width as needed */
+          background-color: #F8DDCE; /* Darker green color on hover */
+          color:#5c3818;
+          font-family: 'FalseWidow', serif; /* Use the font for headings or other elements */
+
+          cursor: pointer; /* Show a pointer cursor on hover */
+      }
+
+      /* Style for the options within the select */
+      select option {
+        background-color: #F8DDCE; /* Darker green color on hover */
+        font-family: 'FalseWidow', serif; /* Use the font for headings or other elements */
+
+        color:#5c3818;
+      }
+
+      /* Style for the select when it is in focus */
+      select:focus {
+          outline: none; /* Remove default focus outline */
+          border-color: #007bff; /* Border color when in focus */
+      }
