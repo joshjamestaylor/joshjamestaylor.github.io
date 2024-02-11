@@ -1,15 +1,12 @@
     // Array of random hints
     const hints = [
-        "Try breaking the problem into smaller steps.",
-        "Take a break and come back with a fresh perspective.",
-        "Ask for help from a friend or colleague.",
-        "Read the documentation for more insights.",
-        "Experiment with different approaches.",
-        "Think about the problem from a different angle.",
-        "Review your code for typos and syntax errors.",
-        "Consider using a debugger to trace the code execution.",
-        "Don't be afraid to refactor your code if needed.",
-        "Remember to check for edge cases."
+        "What if I rotated that last painting.",
+        "I seem to recognise that pattern in the final painting",
+        "Maybe those numbers on the end painting mean something, ships? Buildings..?",
+        "Interesting he mentions boxstep. How does it go again? Left, right, left, right, left... right?",
+        "How many ports can I see?",
+        "Second port USA?",
+        "The 4th abstract painting looks like the feet of a dance."
       ];
   
       function generateRandomHint() {

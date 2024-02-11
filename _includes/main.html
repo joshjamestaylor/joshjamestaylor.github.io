@@ -1,4 +1,28 @@
-<section class="main">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Page Title</title>
+
+  <!-- Link to the external CSS file -->
+  <link rel="stylesheet" href="/assets/css/styles.css">
+
+  <!-- You can include additional meta tags, styles, or links here as needed -->
+
+</head>
+
+<body>
+  <!-- Your page content goes here -->
+  <header>
+    
+</header>
+  
+
+
+
+  <section class="main">
     <div class="container">
         <h1>The second date</h1>
 
@@ -6,83 +30,185 @@
 
         <section class="section">
             <div class="section__half">
-                    {% include card.html image="/assets/images/img-2.webp" %}
+                    <div class="card">
+    <!---->
+    <img class="card__image" src="/assets/images/img-2.jpg" alt="">
+</div>
 
                 <br>
-                   {% include card.html image="/assets/images/img-3.jpg" %}
+                   <div class="card">
+    <!---->
+    <img class="card__image" src="/assets/images/img-3.jpg" alt="">
+</div>
                 <br>
 
         
             </div>
             <div class="section__half">
-                {% include text.html content="
-                    Who would have thought that his father is the owner of The Cabildo
-                " %}
+                <h2 class="text">
+    
+                    Who would have thought that his father is the owner of The Cabildo, the greatest museum in New Orleans.
+                
+</h2>
             </div>
         
         </section>
 
         <section class="section">
             <div class="section__half">
-                {% include text.html content="
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis sunt corporis voluptatibus ea? 
-
-                " %}
+                <h2 class="text">
+    
+He said there was a new exhibition open called "The locked vault"
+                
+</h2>
 
             </div>
             <div class="section__half">
-                {% include card.html image="/assets/images/img-1.webp" %}
+                <div class="card">
+    <!---->
+    <img class="card__image" src="/assets/images/img-1.webp" alt="">
+</div>
             </div>
         
         </section>
 
         <section class="section">
             <div class="section__half">
-                {% include card.html image="/assets/images/img-4.webp" %}
+                <div class="card">
+    <!---->
+    <img class="card__image" src="/assets/images/img-6.png" alt="">
+</div>
 
 
 
             </div>
             <div class="section__half">
-                {% include text.html content="
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis sunt corporis voluptatibus ea? 
-
-                " %}
+                <h2 class="text">
+    
+He said many have tried to box step with it but none prevailed
+                
+</h2>
             </div>
         
         </section>
 
         <section class="section">
             <div class="section__half">
-                {% include text.html content="
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis sunt corporis voluptatibus ea? 
+                <h2 class="text">
+    
 
-                " %}
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum eius molestiae aperiam quis ea, cumque labore consequatur velit, quidem perferendis voluptatem vitae commodi iste unde officiis reiciendis tempore recusandae mollitia.</p>
+                
+</h2>
 
             </div>
             <div class="section__half">
+                <div class="card">
+                    <!---->
+                    <img class="card__image" src="/assets/images/img-5.webp" alt="">
+                </div>
+                
             </div>
         
         </section>
 
         <section class="section">
             <div class="section__half">
-                {% include text.html content="
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis sunt corporis voluptatibus ea? 
-
-                " %}
+                <div class="card">
+    <!---->
+    <img class="card__image" src="/assets/images/img-4.webp" alt="">
+</div>
 
             </div>
             <div class="section__half">
-                {% include card.html image="/assets/images/img-3.webp" %}
+
+
+            </div>
+
+        
+        </section>
+        <section class="section">
+
+            <div class="section__half">
+                <h2 class="text">
+    
+I wonder what this could all mean?
+                
+</h2>
+
+            </div>
+            <div class="section__half">
+                <div class="card">
+    <!---->
+    <img class="card__image" src="/assets/images/img-7.png" alt="">
+</div>
 
             </div>
         
         </section>
+
+        <button onclick="generateRandomHint()">Generate Hint</button>
+        <h2 id="hint"></h2>
+
+        <label for="dropdown1">Dropdown 1:</label>
+        <select id="dropdown1">
+            <option value="53">53</option>
+            <option value="34">34</option>
+            <option value="46">46</option>
+            <option value="21">21</option>
+            <option value="86">86</option>
+        </select>
+    
+        <label for="dropdown2">Dropdown 2:</label>
+        <select id="dropdown2">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+        </select>
+    
+        <label for="dropdown3">Dropdown 3:</label>
+        <select id="dropdown3">
+            <option value="CEBAFD">CEBAFD</option>
+            <option value="BDAECF">BDAECF</option>
+            <option value="FDBCAE">FDBCAE</option>
+            <option value="ECFABD">ECFABD</option>
+        </select>
+    
+        <button onclick="checkCombination()">Check Combination</button>
+        <h2 id="result"></div>
+
     
     
     </div>    
 
 
 </section>
+
+
+  <!-- Link to the external JavaScript file -->
+  <footer class="bg--green">
+    
+</footer>
+  <script src="/assets/js/scripts.js"></script>
+
+  <!-- You can include additional scripts or other elements here as needed -->
+
+</body>
+
+</html>
