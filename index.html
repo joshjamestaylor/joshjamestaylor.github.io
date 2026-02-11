@@ -8,27 +8,41 @@
 </head>
 <body>
 
-  <header class="hero">
-    <div class="frame">
-      <h1>The Golden Age</h1>
-      <p class="subtitle">An Evening of Elegance & Jazz</p>
+<header class="hero">
+  <!-- Background Video -->
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Dark overlay -->
+  <div class="hero-overlay"></div>
+
+  <!-- Existing content -->
+  <div class="frame">
+    <h1>The Golden Age</h1>
+    <p class="subtitle">An Evening of Elegance & Jazz</p>
+  </div>
+
+  <div class="info" data-popup="popup-1">
+    <div class="info-icon">
+      <img class="info-image" src="chat.svg" alt="info">
     </div>
 
-    <div class="info">
-      <div class="info-icon" data-popup="popup-1"><img src="chat.svg"><div class="info-popup" id="popup-1">
-        <p>"Welcome to The Golden Age! Enjoy our jazz and elegance."</p>
-        <p>Test</p>
-      </div></div>
-      
+    <div class="info-popup" id="popup-1">
+      <p>"Welcome to The Golden Age! Enjoy our jazz and elegance."</p>
+      <p>Test</p>
     </div>
-  </header>
+  </div>
+</header>
+
 
   <section class="content">
     <div class="card">
       <h2>Welcome</h2>
       <p>
         Step into a world of glamour, champagne, and swinging jazz.
-        The 1920s were bold, lavish, and unapologetically stylish.
+        Bold, lavish, and unapologetically stylish—this is the world you step into tonight.
       </p>
     </div>
 
@@ -46,11 +60,30 @@
         Dress sharp. Dance late. Let the music play until morning.
       </p>
     </div>
+    <div class="info" data-popup="popup-2">
+      <div class="info-icon">
+        <img class="info-image" src="chat.svg" alt="info">
+      </div>
+
+      <div class="info-popup" id="popup-2">
+        <p>Lorem ipsum</p>
+      </div>
+    </div>
   </section>
 
   <section class="banner">
     <div class="text">
       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores consectetur at a quasi totam iste soluta hic, blanditiis sapiente. Tempore cum, ipsam eius aut sed officiis, recusandae quos ducimus distinctio voluptates hic voluptatem saepe vitae sequi molestias sint suscipit, nemo labore laboriosam asperiores quasi libero et! Molestias deleniti dolor maxime!</p>
+    </div>
+
+        <div class="info" data-popup="popup-3">
+      <div class="info-icon">
+        <img class="info-image" src="chat.svg" alt="info">
+      </div>
+
+      <div class="info-popup" id="popup-3">
+        <p>Lorem ipsum</p>
+      </div>
     </div>
   </section>
 
@@ -68,22 +101,38 @@
       </p>
     </div>
   </div>
+    <div class="info" data-popup="popup-3">
+      <div class="info-icon">
+        <img class="info-image" src="chat.svg" alt="info">
+      </div>
+
+      <div class="info-popup" id="popup-3">
+        <p>Lorem ipsum</p>
+      </div>
+    </div>
 </section>
 
 <section class="feature feature--dark">
   <div class="feature-text">
-    <h2>Facilities</h2>
+    <h2>Lorem, ipsum.
+    </h2>
     <p>
-      Beneath glittering chandeliers and golden arches, the Grand Ballroom
-      welcomes guests into an evening of rhythm and elegance. The orchestra
-      plays, laughter fills the air, and the spirit of the Golden Age lives on.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, eveniet.
     </p>
-    <a href="#" class="read-more">Discover More</a>
   </div>
 
   <div class="feature-image">
-    <img src="img-2.png" alt="Grand Ballroom">
+    <img src="img-5.png" alt="Grand Ballroom">
   </div>
+    <div class="info" data-popup="popup-4">
+      <div class="info-icon">
+        <img class="info-image" src="chat.svg" alt="info">
+      </div>
+
+      <div class="info-popup" id="popup-4">
+        <p>Lorem ipsum</p>
+      </div>
+    </div>
 </section>
 
 
@@ -96,135 +145,147 @@
   <div class="feature-frame">
     <h2>An Era of Elegance</h2>
     <p>
-      The Golden Age was defined by bold architecture, lively music,
-      and unforgettable nights beneath glowing city lights.
-      Every detail reflected craftsmanship, luxury, and optimism.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores eos possimus laudantium doloremque! Numquam blanditiis, nihil saepe vitae quae dolor.
     </p>
-    <p>
-      From grand ballrooms to intimate jazz clubs, the decade
-      celebrated expression, movement, and modern design.
-    </p>
-    <a href="#" class="read-more">Learn More</a>
   </div>
 </div>
+    <div class="info" data-popup="popup-5">
+      <div class="info-icon">
+        <img class="info-image" src="chat.svg" alt="info">
+      </div>
 
+      <div class="info-popup" id="popup-5">
+        <p>Lorem ipsum</p>
+      </div>
+    </div>
 </section> 
 
 <section class="menu">
   <div class="menu-container">
     <h2>à la carte</h2>
     <p class="menu-intro">
-      Indulge in a curated selection of 1920s-inspired dishes and cocktails for an unforgettable evening.
+      Indulge in a curated selection of dishes and cocktails for an unforgettable evening.
     </p>
 
     <div class="menu-columns">
 
-      <!-- Left Column -->
-      <div class="menu-column">
-        <!-- Appetizers -->
-        <div class="menu-section">
-          <h3>Appetizers</h3>
-          <ul class="menu-items">
-            <li>
-              <span class="dish-name">Oysters Rockefeller</span>
-              <span class="dish-price">$18</span>
-              <p class="dish-description">Fresh oysters baked with spinach, butter, and breadcrumbs.</p>
-            </li>
-            <li>
-              <span class="dish-name">Deviled Eggs</span>
-              <span class="dish-price">$12</span>
-              <p class="dish-description">Classic creamy eggs with a hint of mustard and paprika.</p>
-            </li>
-            <li>
-              <span class="dish-name">Shrimp Cocktail</span>
-              <span class="dish-price">$16</span>
-              <p class="dish-description">Chilled shrimp served with zesty cocktail sauce.</p>
-            </li>
-          </ul>
-        </div>
+ <!-- Left Column -->
+<div class="menu-column">
+  <!-- Appetizers -->
+  <div class="menu-section">
+    <h3>Appetizers</h3>
+    <ul class="menu-items">
+      <li>
+        <span class="dish-name">Oysters Rockefeller</span>
+        <span class="dish-price">$1.50</span>
+        <p class="dish-description">Fresh oysters baked with spinach, butter, and breadcrumbs.</p>
+      </li>
+      <li>
+        <span class="dish-name">Deviled Eggs</span>
+        <span class="dish-price">$0.75</span>
+        <p class="dish-description">Classic creamy eggs with a hint of mustard and paprika.</p>
+      </li>
+      <li>
+        <span class="dish-name">Shrimp Cocktail</span>
+        <span class="dish-price">$1.25</span>
+        <p class="dish-description">Chilled shrimp served with zesty cocktail sauce.</p>
+      </li>
+    </ul>
+  </div>
 
-        <!-- Main Courses -->
-        <div class="menu-section">
-          <h3>Main Courses</h3>
-          <ul class="menu-items">
-            <li>
-              <span class="dish-name">Beef Wellington</span>
-              <span class="dish-price">$42</span>
-              <p class="dish-description">Tender beef wrapped in puff pastry, served with red wine reduction.</p>
-            </li>
-            <li>
-              <span class="dish-name">Seared Salmon</span>
-              <span class="dish-price">$36</span>
-              <p class="dish-description">Pan-seared salmon with lemon beurre blanc and seasonal vegetables.</p>
-            </li>
-            <li>
-              <span class="dish-name">Chicken à la King</span>
-              <span class="dish-price">$32</span>
-              <p class="dish-description">Creamy chicken and mushrooms in a rich puff pastry shell.</p>
-            </li>
-          </ul>
-        </div>
+  <!-- Main Courses -->
+  <div class="menu-section">
+    <h3>Main Courses</h3>
+    <ul class="menu-items">
+      <li>
+        <span class="dish-name">Beef Wellington</span>
+        <span class="dish-price">$4.50</span>
+        <p class="dish-description">Tender beef wrapped in puff pastry, served with red wine reduction.</p>
+      </li>
+      <li>
+        <span class="dish-name">Seared Salmon</span>
+        <span class="dish-price">$3.75</span>
+        <p class="dish-description">Pan-seared salmon with lemon beurre blanc and seasonal vegetables.</p>
+      </li>
+      <li>
+        <span class="dish-name">Chicken à la King</span>
+        <span class="dish-price">$3.25</span>
+        <p class="dish-description">Creamy chicken and mushrooms in a rich puff pastry shell.</p>
+      </li>
+    </ul>
+  </div>
 
-        <!-- Desserts -->
-        <div class="menu-section">
-          <h3>Desserts</h3>
-          <ul class="menu-items">
-            <li>
-              <span class="dish-name">Crème Brûlée</span>
-              <span class="dish-price">$12</span>
-              <p class="dish-description">Classic vanilla custard topped with caramelized sugar.</p>
-            </li>
-            <li>
-              <span class="dish-name">Chocolate Soufflé</span>
-              <span class="dish-price">$14</span>
-              <p class="dish-description">Light and airy chocolate soufflé served warm with cream.</p>
-            </li>
-            <li>
-              <span class="dish-name">Pineapple Upside-Down Cake</span>
-              <span class="dish-price">$10</span>
-              <p class="dish-description">A 1920s classic, sweet caramelized pineapple on a moist cake.</p>
-            </li>
-          </ul>
-        </div>
-      </div>
+  <!-- Desserts -->
+  <div class="menu-section">
+    <h3>Desserts</h3>
+    <ul class="menu-items">
+      <li>
+        <span class="dish-name">Crème Brûlée</span>
+        <span class="dish-price">$0.75</span>
+        <p class="dish-description">Classic vanilla custard topped with caramelized sugar.</p>
+      </li>
+      <li>
+        <span class="dish-name">Chocolate Soufflé</span>
+        <span class="dish-price">$0.85</span>
+        <p class="dish-description">Light and airy chocolate soufflé served warm with cream.</p>
+      </li>
+      <li>
+        <span class="dish-name">Pineapple Upside-Down Cake</span>
+        <span class="dish-price">$0.50</span>
+        <p class="dish-description">A classic, sweet caramelized pineapple on a moist cake.</p>
+      </li>
+    </ul>
+  </div>
+</div>
 
-      <!-- Right Column -->
-      <div class="menu-column">
-        <!-- Drinks -->
-        <div class="menu-section">
-          <h3>Drinks</h3>
-          <ul class="menu-items">
-            <li>
-              <span class="dish-name">Gin Rickey</span>
-              <span class="dish-price">$12</span>
-              <p class="dish-description">Gin, lime, and soda—a refreshing prohibition-era favorite.</p>
-            </li>
-            <li>
-              <span class="dish-name">Sidecar</span>
-              <span class="dish-price">$14</span>
-              <p class="dish-description">Cognac, orange liqueur, and lemon juice, shaken to perfection.</p>
-            </li>
-            <li>
-              <span class="dish-name">French 75</span>
-              <span class="dish-price">$16</span>
-              <p class="dish-description">Champagne, gin, and lemon juice—bubbly and elegant.</p>
-            </li>
-            <li>
-              <span class="dish-name">Old Fashioned</span>
-              <span class="dish-price">$14</span>
-              <p class="dish-description">Whiskey, sugar, and bitters served over ice with an orange twist.</p>
-            </li>
-            <li>
-              <span class="dish-name">Mocktail: Ginger Fizz</span>
-              <span class="dish-price">$8</span>
-              <p class="dish-description">Ginger ale, lemon, and a hint of mint—perfect for non-drinkers.</p>
-            </li>
-          </ul>
-        </div>
-      </div>
+<!-- Right Column -->
+<div class="menu-column">
+  <!-- Drinks -->
+  <div class="menu-section">
+    <h3>Drinks</h3>
+    <ul class="menu-items">
+      <li>
+        <span class="dish-name">Gin Rickey</span>
+        <span class="dish-price">$0.75</span>
+        <p class="dish-description">Gin, lime, and soda—a refreshing prohibition-era favorite.</p>
+      </li>
+      <li>
+        <span class="dish-name">Sidecar</span>
+        <span class="dish-price">$1.00</span>
+        <p class="dish-description">Cognac, orange liqueur, and lemon juice, shaken to perfection.</p>
+      </li>
+      <li>
+        <span class="dish-name">French 75</span>
+        <span class="dish-price">$1.25</span>
+        <p class="dish-description">Champagne, gin, and lemon juice—bubbly and elegant.</p>
+      </li>
+      <li>
+        <span class="dish-name">Old Fashioned</span>
+        <span class="dish-price">$1.00</span>
+        <p class="dish-description">Whiskey, sugar, and bitters served over ice with an orange twist.</p>
+      </li>
+      <li>
+        <span class="dish-name">Mocktail: Ginger Fizz</span>
+        <span class="dish-price">$0.50</span>
+        <p class="dish-description">Ginger ale, lemon, and a hint of mint—perfect for non-drinkers.</p>
+      </li>
+    </ul>
+  </div>
+</div>
+
 
     </div>
   </div>
+
+      <div class="info" data-popup="popup-6">
+      <div class="info-icon">
+        <img class="info-image" src="chat.svg" alt="info">
+      </div>
+
+      <div class="info-popup" id="popup-6">
+        <p>Lorem ipsum</p>
+      </div>
+    </div>
 </section>
 
 
@@ -239,7 +300,15 @@
     </p>
   </div>
 
+    <div class="info" data-popup="popup-7">
+      <div class="info-icon">
+        <img class="info-image" src="chat.svg" alt="info">
+      </div>
 
+      <div class="info-popup" id="popup-7">
+        <p>Lorem ipsum</p>
+      </div>
+    </div>
 </section>
 
 
@@ -258,11 +327,31 @@
   <div class="feature-image">
     <img src="img-4.png" alt="Grand Ballroom">
   </div>
+
+      <div class="info" data-popup="popup-8">
+      <div class="info-icon">
+        <img class="info-image" src="chat.svg" alt="info">
+      </div>
+
+      <div class="info-popup" id="popup-8">
+        <p>Lorem ipsum</p>
+      </div>
+    </div>
 </section>
 
  <section class="banner">
     <div class="text">
       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores consectetur at a quasi totam iste soluta hic, blanditiis sapiente. Tempore cum, ipsam eius aut sed officiis, recusandae quos ducimus distinctio voluptates hic voluptatem saepe vitae sequi molestias sint suscipit, nemo labore laboriosam asperiores quasi libero et! Molestias deleniti dolor maxime!</p>
+    </div>
+
+        <div class="info" data-popup="popup-9">
+      <div class="info-icon">
+        <img class="info-image" src="chat.svg" alt="info">
+      </div>
+
+      <div class="info-popup" id="popup-9">
+        <p>Lorem ipsum</p>
+      </div>
     </div>
   </section>
 
@@ -270,7 +359,7 @@
   <div class="form-container">
     <h2>RSVP</h2>
     <p class="form-intro">
-      Reserve your place for an unforgettable evening of music and elegance.
+      Reserve your place for an unforgettable evening of music and elegance. Don't forget your booking number on arrival.
     </p>
 
     <form>
@@ -292,6 +381,16 @@
       <button type="submit">Send Reply</button>
     </form>
   </div>
+
+      <div class="info" data-popup="popup-10">
+      <div class="info-icon">
+        <img class="info-image" src="chat.svg" alt="info">
+      </div>
+
+      <div class="info-popup" id="popup-10">
+        <p>Lorem ipsum</p>
+      </div>
+    </div>
 </section>
 
 
@@ -300,19 +399,6 @@
 
 
   
-
-
-<div class="info-icon" data-popup="popup-2">?</div>
-<div class="info-icon" data-popup="popup-3">?</div>
-
-
-<div class="info-popup" id="popup-2">
-  <p>Check out our menu of 1920s-inspired dishes and drinks!</p>
-</div>
-
-<div class="info-popup" id="popup-3">
-  <p>RSVP for an unforgettable evening of music and glamour.</p>
-</div>
 
 
 

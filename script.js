@@ -1,20 +1,23 @@
-// Get all icons
-const icons = document.querySelectorAll(".info-icon");
+const infos = document.querySelectorAll(".info");
 
-// Loop through each icon
-icons.forEach(icon => {
-  const popupId = icon.getAttribute("data-popup");
-  const popup = document.getElementById(popupId);
-  const closeBtn = popup.querySelector(".close-popup");
+infos.forEach((info) => {
+  const icon = info.querySelector(".info-icon");
+  const popup = info.querySelector(".info-popup");
 
-  // Show popup on icon click
-  icon.addEventListener("click", () => {
-    console.log(`Icon clicked: ${popupId}`);
-    popup.style.display = "block";
+  icon.addEventListener("click", (e) => {
+    e.stopPropagation();
+
+    // close other popups
+    document.querySelectorAll(".info-popup").forEach((p) => {
+      if (p !== popup) p.classList.remove("active");
+    });
+
+    popup.classList.toggle("active");
   });
 
-  // Close popup on button click
-  closeBtn.addEventListener("click", () => {
-    popup.style.display = "none";
+  document.addEventListener("click", (e) => {
+    if (!info.contains(e.target)) {
+      popup.classList.remove("active");
+    }
   });
 });
