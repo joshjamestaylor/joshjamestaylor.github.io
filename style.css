@@ -105,6 +105,11 @@ header, section, footer {
   z-index: 2;
 }
 
+.logo {
+  z-index: 3;
+  position: relative;
+}
+
 
 .frame {
   border: var(--border-thick) solid var(--color-gold);
@@ -249,7 +254,7 @@ h1 {
   border-top: none;
 }
 
-.banner .text p {
+.banner .text p, ul, h2, h3 {
   font-size: var(--font-size-body);
       color: var(--color-cream);
 
@@ -386,6 +391,10 @@ h1 {
   margin-bottom: var(--space-sm);
 }
 
+.feature-text--dark h2 {
+  color: var(--color-black);
+}
+
 .feature-text p {
   margin-bottom: var(--space-sm);
 }
@@ -514,6 +523,29 @@ background-color: var(--color-gold);
   font-weight: bold;
 }
 
+.feature-list {
+  list-style: none;
+  margin: var(--space-sm) 0;
+  padding: 0;
+}
+
+.feature-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: var(--space-xs);
+}
+
+/* gold diamond bullet */
+.feature-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  background: var(--color-gold);
+  transform: rotate(45deg);
+}
 
 
 .menu {
@@ -708,6 +740,41 @@ background-color: var(--color-gold);
 .form-group {
   display: flex;
   flex-direction: column;
+  margin-bottom: var(--space-sm);
+}
+
+#booking-number,
+#time {
+  padding: var(--space-sm);
+  border: var(--border-thin) solid var(--color-gold);
+  background: var(--color-black);
+  color: var(--color-cream);
+  font-family: var(--font-base);
+  font-size: var(--font-size-body);
+  border-radius: 4px; /* subtle rounding */
+}
+
+/* Dropdown arrow styling for time select */
+#time {
+  appearance: none; /* remove default arrow */
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg width='10' height='10' viewBox='0 0 10 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,0 10,0 5,5' fill='%23d4af37'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px 10px;
+  padding-right: 30px; /* space for arrow */
+}
+
+/* Focus states */
+#booking-number:focus,
+#time:focus {
+  outline: none;
+  border-color: var(--color-cream);
+}
+
+/* Optional: make them full-width like other inputs */
+#booking-number,
+#time {
+  width: 100%;
   margin-bottom: var(--space-sm);
 }
 
