@@ -270,6 +270,18 @@ h1 {
   line-height: 1.6;
 }
 
+.banner .text h3,
+.banner .text ul {
+
+  text-align: center;
+  margin: 10px auto; /* optional for good measure */
+  list-style-position: inside; /* ensures bullets are aligned */
+  padding-left: 0; /* remove default ul padding */
+   list-style: none;
+}
+
+
+
 .banner .text-empty {
   padding: var(--space-xl) 0;
 }
@@ -288,22 +300,43 @@ h1 {
   color: var(--color-black-deep);
 }
 
-/* News Card */
+/* NEWS CARD RESPONSIVE UPDATE */
 .news-card {
   display: flex;
+  flex-wrap: wrap; /* allow stacking on smaller screens */
   gap: var(--space-lg);
   background-color: var(--color-cream);
   align-items: flex-start;
   padding: var(--space-md);
 }
 
-/* News Image with Card-Style Corners */
 .news-image {
-  flex: 1;
+  flex:  10%; /* grow/shrink, minimum 300px */
   position: relative;
   border: var(--border-thick) solid var(--color-gold);
-  padding: 0; /* no inner padding, image touches the border */
 }
+
+.news-text {
+  flex: 2 1 300px; /* grow/shrink, minimum 300px */
+  text-align: left;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .news-card {
+    flex-direction: column; /* stack image above text */
+  }
+
+  .news-image,
+  .news-text {
+    flex: 1 1 100%; /* full width */
+  }
+
+  .news-text {
+    text-align: center; /* optional, looks nicer on mobile */
+  }
+}
+
 
 .news-image::before,
 .news-image::after {
@@ -382,14 +415,79 @@ h1 {
   background: var(--color-black);
 }
 
-.feature--light {
+/* FEATURE--LIGHT DEFAULT (desktop / large screens) */
+.feature.feature--light {
+  display: flex;
+  flex-wrap: nowrap; /* side-by-side by default */
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+  padding: var(--space-xl);
   background: var(--color-cream);
   color: var(--color-black);
 }
 
+/* Text and image panels */
+.feature.feature--light > .feature-text,
+.feature.feature--light > .feature-image {
+  flex: 1 1 50%; /* split 50/50 */
+  min-width: 300px; /* prevent shrinking too far */
+}
+
+/* Ensure image fills container */
+.feature.feature--light .feature-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Mobile / tablet */
+@media (max-width: 768px) {
+  .feature.feature--light {
+    flex-direction: column; /* stack vertically */
+    padding: var(--space-md);
+  }
+
+  .feature.feature--light > .feature-text,
+  .feature.feature--light > .feature-image {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .feature.feature--light .feature-text {
+    text-align: center; /* center text for small screens */
+    padding: var(--space-sm) 0;
+  }
+
+  .feature.feature--light .feature-text p {
+    margin-bottom: var(--space-sm);
+  }
+}
+
+
 .feature--dark {
   background: var(--color-black);
   color: var(--color-cream);
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+
+
+@media (max-width: 768px) {
+  .feature--dark > .feature-image,
+  .feature--dark > .feature-text {
+    width: 100%;
+    flex: 1 1 100%; /* full width */
+  }
+
+  .feature--dark table {
+    width: 100%; /* make table fit container */
+    overflow-x: auto; /* horizontal scroll if needed */
+    display: block;
+    
+  }
 }
 
 /* Facilities Table Styling */
@@ -402,13 +500,14 @@ h1 {
   font-family: 'Garamond', serif;
   background: rgba(20, 20, 20, 0.8);
   color: var(--color-gold); /* soft gold text */
-  overflow: hidden;
+  overflow-x: scroll  ;
 }
 
 .feature--dark table td {
   padding: 12px 18px;
   text-align: center;
   border-bottom: 1px solid var(--color-gold);
+  border-right: 1px solid var(--color-gold);
 }
 
 .feature--dark table tr:last-child td {
@@ -424,6 +523,12 @@ h1 {
 .feature--dark table td:last-child {
   border-right: none;
 }
+
+ /* Highlight red numbers */
+  .gold {
+    background-color: var(--color-gold);
+    color: var(--color-black);
+  }
 
 
 /* TEXT SIDE */
@@ -488,13 +593,56 @@ h1 {
   display: block;
 }
 
-/* SPLIT FEATURE (IMAGE LEFT) */
+/* FEATURE-SPLIT RESPONSIVE */
 .feature-split {
   display: flex;
+  flex-wrap: wrap; /* allow stacking on smaller screens */
   min-height: 500px;
-  
 }
 
+/* Image and text default flex */
+.feature-split-image,
+.feature-split-text {
+  flex: 1 1 50%; /* default: half-half */
+}
+
+/* Ensure image fills container */
+.feature-split-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .feature-split {
+    flex-direction: column; /* stack vertically */
+    min-height: auto; /* remove fixed height */
+  }
+
+  .feature-split-image,
+  .feature-split-text {
+    flex: 1 1 100%; /* full width */
+  }
+
+  .feature-split-text {
+    padding: var(--space-md); /* reduce padding for mobile */
+    text-align: center; /* optional for readability */
+  }
+
+  .feature-split-text p {
+    margin-bottom: var(--space-sm);
+  }
+
+  .feature-frame {
+    padding: var(--space-md); /* reduce internal padding */
+  }
+
+  .feature-text-icon {
+    width: 100px; /* smaller icon on mobile */
+  }
+}
 /* LEFT IMAGE */
 .feature-split-image {
   flex: 1;
@@ -659,7 +807,6 @@ background-color: var(--color-gold);
 
 .menu-column {
   flex: 1;
-  min-width: 280px;
 }
 
 /* Section Titles */
@@ -732,17 +879,28 @@ background-color: var(--color-gold);
 }
 
 
-/* FORM SECTION */
 .form {
   padding: var(--space-xl);
   background: var(--color-cream);
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* equal columns */
+  gap: var(--space-xl);
+  align-items: start;
+
 }
 
-/* FORM CARD */
+@media (max-width: 768px) {
+  .form {
+    grid-template-columns: 1fr; /* stack vertically */
+  }
+}
+
 .form-container {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: var(--space-sm);
+  flex: 1;
   max-width: 600px;
   background: var(--color-black-deep);
   padding: var(--space-xl);
@@ -750,7 +908,13 @@ background-color: var(--color-gold);
   border: var(--border-thick) solid var(--color-gold);
 }
 
-/* decorative corners */
+.form-container h2 {
+  color: var(--color-gold);
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: var(--letter-spacing-wide);
+  margin-bottom: var(--space-sm);
+}
 .form-container::before,
 .form-container::after {
   content: "";
@@ -774,25 +938,123 @@ background-color: var(--color-gold);
   border-top: none;
 }
 
-.form-container h2 {
+.form-message {
+  flex: 1;
+  max-width: 600px;
+}
+
+/* Default booking message */
+.booking-message-box {
+  padding: 1rem;
+  transition: all 0.3s ease;
+  display: none;
+}
+
+/* Wrong input style */
+.booking-message-box {
+ display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: var(--space-sm);
+  flex: 1;
+  max-width: 600px;
+  position: relative;
+  border: 3px solid var(--color-gold);}
+
+.booking-message-box h2 {
   color: var(--color-gold);
   text-transform: uppercase;
+  text-align: center;
   letter-spacing: var(--letter-spacing-wide);
   margin-bottom: var(--space-sm);
-  text-align: center;
+}
+.booking-message-box::before,
+.booking-message-box::after {
+  content: "";
+  position: absolute;
+  width: var(--corner-size);
+  height: var(--corner-size);
+  border: var(--border-thick) solid var(--color-gold);
 }
 
-.form-intro {
-  text-align: center;
-  margin-bottom: var(--space-md);
+.booking-message-box::before {
+  top: var(--border-offset);
+  left: var(--border-offset);
+  border-right: none;
+  border-bottom: none;
 }
 
-/* FORM ELEMENTS */
-.form-group {
+.booking-message-box::after {
+  bottom: var(--border-offset);
+  right: var(--border-offset);
+  border-left: none;
+  border-top: none;
+}
+
+/* Correct input style – fancy design! */
+.booking-message-box.correct {
+  background:
+    url("bg.svg") center / cover no-repeat,
+    var(--color-gold);
+  
+  position: relative;
+}
+
+.booking-message-box.correct {
+  background:
+    url("bg.svg") center / cover no-repeat,
+    var(--color-gold);
+  
+  position: relative;
+}
+
+.booking-message-box.correct .booking-message-content{
   display: flex;
   flex-direction: column;
+  position: relative;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  position: relative;
+  border: 3px solid var(--color-gold);
+  background-color: var(--color-black);
+  text-align: center;
+}
+
+/* Header */
+.booking-message-content-header {
+  color: var(--color-gold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wider);
+  font-weight: bold;
   margin-bottom: var(--space-sm);
 }
+
+/* Body */
+.booking-message-content-body {
+
+}
+
+/* Footer */
+.booking-message-content-footer {
+
+}
+
+.booking-message-content-flavor {
+  font-style: italic;
+  font-size: 0.75rem;
+  color: var(--color-cream);
+  margin-top: var(--space-sm);
+}
+
+/* Correct input style – fancy design! */
+.booking-message-box.wrong {
+  background:var(--color-black);
+  
+  position: relative;
+}
+
+
+
 
 #booking-number,
 #time {
@@ -805,15 +1067,7 @@ background-color: var(--color-gold);
   border-radius: 4px; /* subtle rounding */
 }
 
-/* Dropdown arrow styling for time select */
-#time {
-  appearance: none; /* remove default arrow */
-  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg width='10' height='10' viewBox='0 0 10 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,0 10,0 5,5' fill='%23d4af37'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 10px center;
-  background-size: 10px 10px;
-  padding-right: 30px; /* space for arrow */
-}
+
 
 /* Focus states */
 #booking-number:focus,

@@ -131,50 +131,49 @@
 
     </p>
     <p>We also have games, here's an example of our roulette board:</p>
-    <table border="1">
+<table >
   <tr>
-    <td>3</td>
+    <td class="gold">3</td>
     <td>6</td>
-    <td>9</td>
-        <td>12</td>
-    <td>15</td>
+    <td class="gold">9</td>
+    <td>12</td>
+    <td class="gold">15</td>
     <td>18</td>
-        <td>21</td>
+    <td class="gold">21</td>
     <td>24</td>
-    <td>27</td>
-        <td>30</td>
-    <td>33</td>
-    <td>36</td>
+    <td class="gold">27</td>
+    <td>30</td>
+    <td class="gold">33</td>
+    <td class="gold">36</td>
   </tr>
   <tr>
     <td>2</td>
-    <td>5</td>
+    <td class="gold">5</td>
     <td>8</td>
-        <td>11</td>
+    <td class="gold">11</td>
     <td>14</td>
-    <td>17</td>
-        <td>20</td>
-    <td>23</td>
+    <td class="gold">17</td>
+    <td>20</td>
+    <td class="gold">23</td>
     <td>26</td>
-        <td>29</td>
+    <td class="gold">29</td>
     <td>32</td>
     <td>35</td>
   </tr>
   <tr>
-    <td>1</td>
+    <td class="gold">1</td>
     <td>4</td>
-    <td>7</td>
-        <td>10</td>
-    <td>13</td>
+    <td class="gold">7</td>
+    <td>10</td>
+    <td class="gold">13</td>
     <td>16</td>
-        <td>19</td>
+    <td>19</td>
     <td>22</td>
-    <td>25</td>
-        <td>28</td>
-    <td>31</td>
+    <td class="gold">25</td>
+    <td>28</td>
+    <td class="gold">31</td>
     <td>34</td>
   </tr>
-
 </table>
 
   </div>
@@ -452,33 +451,37 @@ Ladies shimmer, gentlemen shine, and the dance floor never rests. The Charleston
   </section>
 
 <section class="form">
-  <div class="form-container form-flex">
-    <!-- Left: Form -->
-    <div class="form-left">
-      <h2>RSVP</h2>
-      <p class="form-intro">
-        Reserve your place for an unforgettable evening of music and elegance. Don't forget your booking number on arrival.
-      </p>
 
-      <form>
-        <div class="form-group">
-          <label for="booking-number">Booking Number</label>
-          <input id="booking-number" type="text" placeholder="Your booking number" />
-        </div>
+  <!-- LEFT SIDE -->
+  <div class="form-container">
+    <h2>RSVP</h2>
+    <p class="form-intro">
+      Reserve your place for an unforgettable evening of music and elegance.
+      Don't forget your booking number on arrival.
+    </p>
 
-        <button type="submit">Confirm reservation</button>
-      </form>
-    </div>
-
-    <!-- Right: Message box -->
-    <div class="form-right">
-      <div id="booking-message" class="booking-message-box">
-        Your booking message will appear here.
+    <form>
+      <div class="form-group">
+        <label for="booking-number">Booking Number</label>
+        <input id="booking-number" type="text" placeholder="Your booking number" />
       </div>
+
+      <button type="submit">Confirm reservation</button>
+
+
+    </form>
+          <div id="length-message" class="length-message"></div>
+
+  </div>
+
+  <!-- RIGHT SIDE (OUTSIDE form-container) -->
+  <div class="form-message">
+    <div id="booking-message" class="booking-message-box">
+      Your booking message will appear here.
     </div>
   </div>
 
-
+  
       <div class="thought" data-popup="popup-11">
       <div class="thought-icon">
         <img class="thought-image" src="chat.svg" alt="thought">
@@ -488,7 +491,9 @@ Ladies shimmer, gentlemen shine, and the dance floor never rests. The Charleston
         <p>I hope I remember my booking number…</p>
       </div>
     </div>
+
 </section>
+
 
 
 
