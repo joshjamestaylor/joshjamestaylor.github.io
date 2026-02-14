@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
     Please enjoy an enchanting evening of great jazz, fine company, and unforgettable memories at <strong>The Golden Age Society</strong>.
   </div>
   <div class="booking-message-content-footer">
-    <em>Event Date: February 14, 2026</em>
+    <em>Event Date: February 14, 1924</em>
   </div>
 
   <div class="booking-message-content-flavor">
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <p>We laughed nervously over our cocktails—he insisted I try a Sidecar, which was tart and sweet, while I teased him about ordering a mocktail Ginger Fizz “just to be safe.” But soon, the awkwardness melted away, swept up in the rhythm of the live jazz.</p>
 
-<p>The food arrived and oh my goodness… it was a little slice of heaven. Deviled eggs to start, perfectly creamy with just a hint of paprika. Then the <strong>wild mushroom risotto</strong>, rich and velvety, each bite better than the last. And dessert—oh, dessert! The <strong>chocolate soufflé</strong> came up in a swirl of warmth and cocoa aroma; it practically melted in my mouth while he watched me with the most delighted expression.</p>
+<p>The food arrived and oh my goodness… it was a little slice of heaven. Deviled eggs to start, perfectly creamy with just a hint of paprika. Then the wild mushroom risotto, rich and velvety, each bite better than the last. And dessert—oh, dessert! The chocolate soufflé came up in a swirl of warmth and cocoa aroma; it practically melted in my mouth while he watched me with the most delighted expression.</p>
 
 <p>We wandered over to the grand ballroom, where the music swelled, and before I knew it, he was extending his hand, and we were gliding across the polished floor. Step, spin, laugh, dip—we danced like the world outside didn’t exist, just the two of us and the jazz. I whispered, “I hope I remember the steps,” and he laughed, guiding me effortlessly through the rhythm.</p>
 
